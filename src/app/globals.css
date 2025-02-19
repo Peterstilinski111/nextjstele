@@ -1,0 +1,209 @@
+:root {
+  --telekom-magenta: #E20074;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url('/bg.jpg') center no-repeat fixed;
+}
+
+.logo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--telekom-magenta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container svg {
+  width: 32px;
+  height: 38px;
+}
+
+.login-container {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.login-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.help-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--telekom-magenta);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.btn-primary {
+  background-color: var(--telekom-magenta);
+  color: white;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
+.register-link {
+  text-align: center;
+  color: blue;
+  text-decoration: none;
+  display: block;
+  margin-top: 16px;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.version {
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  body {
+    background: white;
+  }
+
+  .login-container {
+    box-shadow: none;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    color: black;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .footer a {
+    color: black;
+  }
+}
