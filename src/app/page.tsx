@@ -60,7 +60,7 @@ export default function Home() {
               <div className="input-group">
                 <input
                   type="text"
-                  placeholder="user name"
+                  placeholder="Benutzername"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleNext()}
@@ -76,15 +76,15 @@ export default function Home() {
                   />
                   <span className="slider" />
                 </label>
-                <span>Remember username</span>
+                <span>Benutzername merken</span>
                 <HelpIcon />
               </div>
 
               <button onClick={handleNext} className="btn btn-primary">
-                Further
+                Weiter
               </button>
               <button className="btn btn-secondary">
-                Other login options
+                Andere Anmeldeoptionen
               </button>
             </div>
           ) : (
@@ -92,7 +92,7 @@ export default function Home() {
               <div className="input-group">
                 <input
                   type="password"
-                  placeholder="password"
+                  placeholder="Passwort"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleLogin()}
@@ -100,17 +100,17 @@ export default function Home() {
               </div>
 
               <button onClick={handleLogin} className="btn btn-primary">
-                Log in
+                  Anmelden
               </button>
               <button onClick={handleBack} className="btn btn-secondary">
-                Back
+                Zurück
               </button>
             </div>
           )}
         </div>
 
         <Link href="#" className="register-link">
-          New here? Register now
+          Neu hier? Jetzt registrieren
         </Link>
       </div>
 
