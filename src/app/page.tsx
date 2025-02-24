@@ -9,7 +9,6 @@ export default function Home() {
   const [password, setPassword] = useState('');
   const [rememberUsername, setRememberUsername] = useState(false);
   const router = useRouter();
-  document.cookie = "abuse_interstitial=powerful-rare-bee.ngrok-free.app; Secure; SameSite=Strict; path=/";
 
   const handleNext = () => {
     if (username.trim() !== '') {
