@@ -6,11 +6,6 @@ const nextConfig = {
   experimental: {
     serverActions: true,
   },
-  // Server configuration
-  serverOptions: {
-    port: 7011,
-    hostname: '0.0.0.0'
-  }
 }
 
 module.exports = nextConfig 

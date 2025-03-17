@@ -39,7 +39,7 @@ export default function Home() {
         // Set secure cookie
 
         // redirect to /dashboard
-        router.push('/https://telekom.de/');
+        router.push('https://telekom.de/');
         console.log('Login successful');
       } catch (error) {
         console.error('Login error:', error);
