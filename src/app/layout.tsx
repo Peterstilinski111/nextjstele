@@ -9,8 +9,8 @@ const montserrat = Montserrat({
 
 
 export const metadata: Metadata = {
-  title: 'Talekom-festnetz-rechnung',
-  description: 'Talekom-festnetz-rechnung',
+  title: 'Talekom-rechnung',
+  description: 'Talekom-rechnung',
 };
 
 export default function RootLayout({
